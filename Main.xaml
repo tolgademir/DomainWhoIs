@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="806,2683" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="700,515" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>BalaReva.Excel.Base</x:String>
@@ -128,7 +128,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="816,2618" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,416" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="WhoIsButtonSelector" />
       <Variable x:TypeArguments="x:Boolean" Name="WhoIsSelector" />
@@ -139,13 +139,15 @@
       <Variable x:TypeArguments="x:String" Name="str_RemainingDay" />
       <Variable x:TypeArguments="x:String" Name="str_DomainAge" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_DomainName" />
+      <Variable x:TypeArguments="x:Boolean" Name="RegisterDateElementExists" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="dt_DomainName" DisplayName="Open Browser, Read Range, Counter Variable and Logging" sap:VirtualizedContainerService.HintSize="754,114" sap2010:WorkflowViewState.IdRef="Sequence_36">
+    <Sequence sap2010:Annotation.AnnotationText="dt_DomainName" DisplayName="Open Browser, Read Range and Logging" sap:VirtualizedContainerService.HintSize="450,112" sap2010:WorkflowViewState.IdRef="Sequence_36">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -217,7 +219,16 @@
           </InArgument>
         </ui:LogMessage.Message>
       </ui:LogMessage>
-      <Sequence DisplayName="Counter Variable" sap:VirtualizedContainerService.HintSize="484,83" sap2010:WorkflowViewState.IdRef="Sequence_37">
+    </Sequence>
+    <Sequence sap2010:Annotation.AnnotationText="RegisterDate&#xA;EndDate&#xA;RemainingDay&#xA;DomainAge" DisplayName="For Each Row, Selectors, Write Range, Logging, Counter Variable" sap:VirtualizedContainerService.HintSize="450,153" sap2010:WorkflowViewState.IdRef="Sequence_38">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Counter Variable" sap:VirtualizedContainerService.HintSize="670,83" sap2010:WorkflowViewState.IdRef="Sequence_37">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -235,41 +246,32 @@
           </Assign.Value>
         </Assign>
       </Sequence>
-    </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="RegisterDate&#xA;EndDate&#xA;RemainingDay&#xA;DomainAge" DisplayName="For Each Row, Selectors, Write Range and Logging" sap:VirtualizedContainerService.HintSize="754,2199" sap2010:WorkflowViewState.IdRef="Sequence_38">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="692,2012" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="670,1459" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row1" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="658,1894" sap2010:WorkflowViewState.IdRef="Sequence_41">
+            <Sequence sap:VirtualizedContainerService.HintSize="636,1341" sap2010:WorkflowViewState.IdRef="Sequence_41">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="596,1783" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="574,1230" sap2010:WorkflowViewState.IdRef="Sequence_9">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Sequence DisplayName="WhoIsSelector, WhoIsButtonSelector Selectors" sap:VirtualizedContainerService.HintSize="534,870" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                <Sequence DisplayName="WhoIsSelector, WhoIsButtonSelector Selectors" sap:VirtualizedContainerService.HintSize="512,317" sap2010:WorkflowViewState.IdRef="Sequence_39">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="WhoIsSelector" sap:VirtualizedContainerService.HintSize="472,83" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                  <Sequence DisplayName="WhoIsSelector" sap:VirtualizedContainerService.HintSize="450,83" sap2010:WorkflowViewState.IdRef="Sequence_29">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -293,7 +295,7 @@
                         </ui:Target>
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If sap:VirtualizedContainerService.HintSize="410,406" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap:VirtualizedContainerService.HintSize="410.00000000000006,406" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">WhoIsSelector</CSharpValue>
@@ -312,7 +314,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayMS="5000" DisplayName="Type Into 'INPUT  TxtWhois'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_1">
+                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayMS="7000" DisplayName="Type Into 'INPUT  TxtWhois'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_1">
                             <ui:TypeInto.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3e23fa44-3e30-4cdf-b6ee-9b684b86a119" InformativeScreenshot="02eb30b4991e085ce27811f7c6a251d2" Selector="&lt;html app='chrome.exe' title='Whois Sorgulama | İsimtescil' /&gt;&lt;webctrl id='TxtWhois' tag='INPUT' css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -347,10 +349,10 @@
                       </If.Else>
                     </If>
                   </Sequence>
-                  <Sequence DisplayName="WhoIsButtonSelector" sap:VirtualizedContainerService.HintSize="472,636" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                  <Sequence DisplayName="WhoIsButtonSelector" sap:VirtualizedContainerService.HintSize="450,83" sap2010:WorkflowViewState.IdRef="Sequence_30">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -384,7 +386,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="5000" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="7000" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -425,7 +427,7 @@
                     </If>
                   </Sequence>
                 </Sequence>
-                <ui:WriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="dt_DomainName" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="534,147" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="DomainDates" StartingCell="A2" WorkbookPath="files\DomainWhoIs.xlsx">
+                <ui:WriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="dt_DomainName" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="512,147" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="DomainDates" StartingCell="A2" WorkbookPath="files\DomainWhoIs.xlsx">
                   <ui:WriteRange.DataTable>
                     <InArgument x:TypeArguments="sd:DataTable">
                       <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_179">dt_DomainName</CSharpValue>
@@ -439,16 +441,21 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:WriteRange>
-                <Sequence DisplayName="RegisterDate" sap:VirtualizedContainerService.HintSize="534,83" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                <Sequence DisplayName="RegisterDate" sap:VirtualizedContainerService.HintSize="512,83" sap2010:WorkflowViewState.IdRef="Sequence_35">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
-                    <ui:GetValue.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22991ef7-a9cf-4cad-9583-d38f1bce9d3d" InformativeScreenshot="9e1640446b4f99dff3e9c54832d9e86b" Selector="&lt;html app='chrome.exe' title='Whois Sorgulama | İsimtescil' /&gt;&lt;webctrl parentid='app' tag='DIV' class='col-4 font-weight-5' idx='1' /&gt;">
+                  <ui:UiElementExists DisplayName="Element Exists 'DIV'" sap:VirtualizedContainerService.HintSize="410,107" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                    <ui:UiElementExists.Exists>
+                      <OutArgument x:TypeArguments="x:Boolean">
+                        <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_50">RegisterDateElementExists</CSharpReference>
+                      </OutArgument>
+                    </ui:UiElementExists.Exists>
+                    <ui:UiElementExists.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8a542248-2555-48b1-ab73-8293d3b92b7e" InformativeScreenshot="831be9bd320438b5bd662316f2d02746" Selector="&lt;html app='chrome.exe' title='Whois Sorgulama | İsimtescil' /&gt;&lt;webctrl parentid='app' tag='DIV' class='col-4 font-weight-5' idx='1' /&gt;">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -456,34 +463,76 @@
                           <InArgument x:TypeArguments="ui:WaitForReady" />
                         </ui:Target.WaitForReady>
                       </ui:Target>
-                    </ui:GetValue.Target>
-                    <ui:GetValue.Value>
-                      <OutArgument x:TypeArguments="x:String">
-                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">str_RegisterDate</CSharpReference>
-                      </OutArgument>
-                    </ui:GetValue.Value>
-                  </ui:GetValue>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
-                    <ui:LogMessage.Message>
-                      <InArgument x:TypeArguments="x:Object">
-                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_178">" Domain name: "+row1["DomainName"].ToString()+ " Domain register date: "+str_RegisterDate</CSharpValue>
+                    </ui:UiElementExists.Target>
+                  </ui:UiElementExists>
+                  <If sap:VirtualizedContainerService.HintSize="410,847" sap2010:WorkflowViewState.IdRef="If_3">
+                    <If.Condition>
+                      <InArgument x:TypeArguments="x:Boolean">
+                        <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_195">RegisterDateElementExists</CSharpValue>
                       </InArgument>
-                    </ui:LogMessage.Message>
-                  </ui:LogMessage>
-                  <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="DomainDates" WorkbookPath="files\DomainWhoIs.xlsx">
-                    <ui:WriteCell.Cell>
-                      <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_161">"B"+CellCounter.ToString()</CSharpValue>
-                      </InArgument>
-                    </ui:WriteCell.Cell>
-                    <ui:WriteCell.Text>
-                      <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_160">str_RegisterDate</CSharpValue>
-                      </InArgument>
-                    </ui:WriteCell.Text>
-                  </ui:WriteCell>
+                    </If.Condition>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,485" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'DIV'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
+                          <ui:GetValue.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="22991ef7-a9cf-4cad-9583-d38f1bce9d3d" InformativeScreenshot="9e1640446b4f99dff3e9c54832d9e86b" Selector="&lt;html app='chrome.exe' title='Whois Sorgulama | İsimtescil' /&gt;&lt;webctrl parentid='app' tag='DIV' class='col-4 font-weight-5' idx='1' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:GetValue.Target>
+                          <ui:GetValue.Value>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">str_RegisterDate</CSharpReference>
+                            </OutArgument>
+                          </ui:GetValue.Value>
+                        </ui:GetValue>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,94" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info">
+                          <ui:LogMessage.Message>
+                            <InArgument x:TypeArguments="x:Object">
+                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_178">" Domain name: "+row1["DomainName"].ToString()+ " Domain register date: "+str_RegisterDate</CSharpValue>
+                            </InArgument>
+                          </ui:LogMessage.Message>
+                        </ui:LogMessage>
+                        <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="DomainDates" WorkbookPath="files\DomainWhoIs.xlsx">
+                          <ui:WriteCell.Cell>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_161">"B"+CellCounter.ToString()</CSharpValue>
+                            </InArgument>
+                          </ui:WriteCell.Cell>
+                          <ui:WriteCell.Text>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_160">str_RegisterDate</CSharpValue>
+                            </InArgument>
+                          </ui:WriteCell.Text>
+                        </ui:WriteCell>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,179" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Throw sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="Throw_3">
+                          <InArgument x:TypeArguments="s:Exception">
+                            <CSharpValue x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="CSharpValue`1_194">new Exception("RegisterDateSelector bulunamadı.")</CSharpValue>
+                          </InArgument>
+                        </Throw>
+                      </Sequence>
+                    </If.Else>
+                  </If>
                 </Sequence>
-                <Sequence DisplayName="EndDate" sap:VirtualizedContainerService.HintSize="534,83" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                <Sequence DisplayName="EndDate" sap:VirtualizedContainerService.HintSize="512,83" sap2010:WorkflowViewState.IdRef="Sequence_40">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -605,12 +654,12 @@
                   <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="DomainDates" WorkbookPath="files\DomainWhoIs.xlsx">
                     <ui:WriteCell.Cell>
                       <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_192">"E"+CellCounter.ToString()</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_199">"E"+CellCounter.ToString()</CSharpValue>
                       </InArgument>
                     </ui:WriteCell.Cell>
                     <ui:WriteCell.Text>
                       <InArgument x:TypeArguments="x:String">
-                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_193">str_DomainAge</CSharpValue>
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_200">str_DomainAge</CSharpValue>
                       </InArgument>
                     </ui:WriteCell.Text>
                   </ui:WriteCell>
@@ -644,10 +693,5 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:ForEachRow>
     </Sequence>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SendMail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="754,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="SendMail.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <scg:Dictionary x:TypeArguments="x:String, Argument" />
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>

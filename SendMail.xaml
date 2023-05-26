@@ -129,7 +129,7 @@
         </bew:ExportWorkBook.ExportPath>
         <bew:ExportWorkBook.FilePath>
           <InArgument x:TypeArguments="x:String">
-            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">ExcelFile</CSharpValue>
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">ExcelFile</CSharpValue>
           </InArgument>
         </bew:ExportWorkBook.FilePath>
       </bew:ExportWorkBook>
@@ -138,7 +138,10 @@
       <ui:SendOutlookMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">
-            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6">PDFFile</CSharpValue>
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">PDFFile</CSharpValue>
+          </InArgument>
+          <InArgument x:TypeArguments="x:String">
+            <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">ExcelFile</CSharpValue>
           </InArgument>
         </scg:List>
       </ui:SendOutlookMail.Files>
