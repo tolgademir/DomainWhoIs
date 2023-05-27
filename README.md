@@ -10,4 +10,6 @@ v.2 : https://www.youtube.com/watch?v=IoloHHPd7e8
 
 # Versions
 
-v.2 : Data filtering is integrated.
+v.2 : Data filtering is integrated. 
+
+https://github.com/tolgademir/DomainWhoIs/blob/main/FilterData.xaml
