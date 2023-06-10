@@ -12,16 +12,16 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "RegisterDateElementExists&Sequence_1",
-        "dt_DomainName&Sequence_1",
-        "str_DomainAge&Sequence_1",
-        "str_RemainingDay&Sequence_1",
-        "str_EndDate&Sequence_1",
-        "CellCounter&Sequence_1",
-        "str_DomainName&Sequence_1",
-        "str_RegisterDate&Sequence_1",
-        "WhoIsSelector&Sequence_1",
-        "WhoIsButtonSelector&Sequence_1"
+        "str_DomainName&Sequence_53",
+        "WhoIsSelector&Sequence_53",
+        "WhoIsButtonSelector&Sequence_53",
+        "RegisterDateElementExists&Sequence_53",
+        "str_RemainingDay&Sequence_53",
+        "str_DomainAge&Sequence_53",
+        "str_EndDate&Sequence_53",
+        "str_RegisterDate&Sequence_45",
+        "CellCounter&Sequence_53",
+        "dt_DomainName&Sequence_53"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -61,9 +61,18 @@
       "Path": "SendMail.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "MailAdress&Sequence_1",
         "PDFFile&Sequence_1",
         "ExcelFile&Sequence_1"
       ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "MailMoveFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null

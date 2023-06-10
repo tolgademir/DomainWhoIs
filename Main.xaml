@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="700,515" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="680,515" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>BalaReva.Excel.Base</x:String>
@@ -128,23 +128,21 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,416" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="512,416" sap2010:WorkflowViewState.IdRef="Sequence_53">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Boolean" Name="WhoIsButtonSelector" />
-      <Variable x:TypeArguments="x:Boolean" Name="WhoIsSelector" />
-      <Variable x:TypeArguments="x:String" Name="str_RegisterDate" />
-      <Variable x:TypeArguments="x:String" Name="str_DomainName" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_DomainName" />
       <Variable x:TypeArguments="x:Int32" Name="CellCounter" />
       <Variable x:TypeArguments="x:String" Name="str_EndDate" />
-      <Variable x:TypeArguments="x:String" Name="str_RemainingDay" />
       <Variable x:TypeArguments="x:String" Name="str_DomainAge" />
-      <Variable x:TypeArguments="sd:DataTable" Name="dt_DomainName" />
+      <Variable x:TypeArguments="x:String" Name="str_RemainingDay" />
       <Variable x:TypeArguments="x:Boolean" Name="RegisterDateElementExists" />
+      <Variable x:TypeArguments="x:Boolean" Name="WhoIsButtonSelector" />
+      <Variable x:TypeArguments="x:Boolean" Name="WhoIsSelector" />
+      <Variable x:TypeArguments="x:String" Name="str_DomainName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Sequence sap2010:Annotation.AnnotationText="dt_DomainName" DisplayName="Open Browser, Read Range and Logging" sap:VirtualizedContainerService.HintSize="450,112" sap2010:WorkflowViewState.IdRef="Sequence_36">
@@ -228,17 +226,17 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Counter Variable" sap:VirtualizedContainerService.HintSize="670,83" sap2010:WorkflowViewState.IdRef="Sequence_37">
+      <Sequence DisplayName="Counter Variable" sap:VirtualizedContainerService.HintSize="670,194" sap2010:WorkflowViewState.IdRef="Sequence_37">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <Assign sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_1">
           <Assign.To>
             <OutArgument x:TypeArguments="x:Int32">
-              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">CellCounter</CSharpReference>
+              <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_53">CellCounter</CSharpReference>
             </OutArgument>
           </Assign.To>
           <Assign.Value>
@@ -295,7 +293,7 @@
                         </ui:Target>
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If sap:VirtualizedContainerService.HintSize="410.00000000000006,406" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If sap:VirtualizedContainerService.HintSize="410,585" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_89">WhoIsSelector</CSharpValue>
@@ -314,7 +312,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayMS="7000" DisplayName="Type Into 'INPUT  TxtWhois'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_1">
+                          <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DelayMS="3000" DisplayName="Type Into 'INPUT  TxtWhois'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,135" sap2010:WorkflowViewState.IdRef="TypeInto_1">
                             <ui:TypeInto.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3e23fa44-3e30-4cdf-b6ee-9b684b86a119" InformativeScreenshot="02eb30b4991e085ce27811f7c6a251d2" Selector="&lt;html app='chrome.exe' title='Whois Sorgulama | İsimtescil' /&gt;&lt;webctrl id='TxtWhois' tag='INPUT' css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;input' /&gt;">
                                 <ui:Target.TimeoutMS>
@@ -373,7 +371,7 @@
                         </ui:Target>
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If sap:VirtualizedContainerService.HintSize="410,378" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If sap:VirtualizedContainerService.HintSize="410,557" sap2010:WorkflowViewState.IdRef="If_2">
                       <If.Condition>
                         <InArgument x:TypeArguments="x:Boolean">
                           <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_91">WhoIsButtonSelector</CSharpValue>
@@ -386,7 +384,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="7000" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'INPUT'" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -427,7 +425,7 @@
                     </If>
                   </Sequence>
                 </Sequence>
-                <ui:WriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="dt_DomainName" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="512,147" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="DomainDates" StartingCell="A2" WorkbookPath="files\DomainWhoIs.xlsx">
+                <ui:WriteRange AddHeaders="False" sap2010:Annotation.AnnotationText="dt_DomainName" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="512,147" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="DomainDates" StartingCell="A2" WorkbookPath="files\DomainDatesResults.xlsx">
                   <ui:WriteRange.DataTable>
                     <InArgument x:TypeArguments="sd:DataTable">
                       <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_179">dt_DomainName</CSharpValue>
@@ -471,8 +469,17 @@
                         <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_195">RegisterDateElementExists</CSharpValue>
                       </InArgument>
                     </If.Condition>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
                       <Sequence sap:VirtualizedContainerService.HintSize="376,485" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="str_RegisterDate" />
+                        </Sequence.Variables>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -491,7 +498,7 @@
                           </ui:GetValue.Target>
                           <ui:GetValue.Value>
                             <OutArgument x:TypeArguments="x:String">
-                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">str_RegisterDate</CSharpReference>
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_54">str_RegisterDate</CSharpReference>
                             </OutArgument>
                           </ui:GetValue.Value>
                         </ui:GetValue>
@@ -502,7 +509,7 @@
                             </InArgument>
                           </ui:LogMessage.Message>
                         </ui:LogMessage>
-                        <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="DomainDates" WorkbookPath="files\DomainWhoIs.xlsx">
+                        <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="DomainDates" WorkbookPath="files\DomainDatesResults.xlsx">
                           <ui:WriteCell.Cell>
                             <InArgument x:TypeArguments="x:String">
                               <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_161">"B"+CellCounter.ToString()</CSharpValue>
@@ -552,7 +559,7 @@
                     </ui:GetValue.Target>
                     <ui:GetValue.Value>
                       <OutArgument x:TypeArguments="x:String">
-                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_44">str_EndDate</CSharpReference>
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_57">str_EndDate</CSharpReference>
                       </OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
@@ -563,7 +570,7 @@
                       </InArgument>
                     </ui:LogMessage.Message>
                   </ui:LogMessage>
-                  <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="DomainDates" WorkbookPath="files\DomainWhoIs.xlsx">
+                  <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="DomainDates" WorkbookPath="files\DomainDatesResults.xlsx">
                     <ui:WriteCell.Cell>
                       <InArgument x:TypeArguments="x:String">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_181">"C"+CellCounter.ToString()</CSharpValue>
@@ -596,7 +603,7 @@
                     </ui:GetValue.Target>
                     <ui:GetValue.Value>
                       <OutArgument x:TypeArguments="x:String">
-                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_47">str_RemainingDay</CSharpReference>
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_60">str_RemainingDay</CSharpReference>
                       </OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
@@ -607,7 +614,7 @@
                       </InArgument>
                     </ui:LogMessage.Message>
                   </ui:LogMessage>
-                  <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="DomainDates" WorkbookPath="files\DomainWhoIs.xlsx">
+                  <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="DomainDates" WorkbookPath="files\DomainDatesResults.xlsx">
                     <ui:WriteCell.Cell>
                       <InArgument x:TypeArguments="x:String">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_188">"D"+CellCounter.ToString()</CSharpValue>
@@ -640,7 +647,7 @@
                     </ui:GetValue.Target>
                     <ui:GetValue.Value>
                       <OutArgument x:TypeArguments="x:String">
-                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_49">str_DomainAge</CSharpReference>
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_61">str_DomainAge</CSharpReference>
                       </OutArgument>
                     </ui:GetValue.Value>
                   </ui:GetValue>
@@ -651,7 +658,7 @@
                       </InArgument>
                     </ui:LogMessage.Message>
                   </ui:LogMessage>
-                  <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="DomainDates" WorkbookPath="files\DomainWhoIs.xlsx">
+                  <ui:WriteCell DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="DomainDates" WorkbookPath="files\DomainDatesResults.xlsx">
                     <ui:WriteCell.Cell>
                       <InArgument x:TypeArguments="x:String">
                         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_199">"E"+CellCounter.ToString()</CSharpValue>
@@ -667,7 +674,7 @@
                 <Assign sap:VirtualizedContainerService.HintSize="512,83" sap2010:WorkflowViewState.IdRef="Assign_4">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Int32">
-                      <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_45">CellCounter</CSharpReference>
+                      <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_55">CellCounter</CSharpReference>
                     </OutArgument>
                   </Assign.To>
                   <Assign.Value>
